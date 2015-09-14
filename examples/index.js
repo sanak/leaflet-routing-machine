@@ -6,9 +6,13 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 L.Routing.control({
 	waypoints: [
-		L.latLng(57.74, 11.94),
-		L.latLng(57.6792, 11.949)
+		L.latLng(34.944479, 135.702857),
+		//L.latLng(34.944916, 135.702972),
+		L.latLng(34.944530, 135.703476)
 	],
+	//router: L.Routing.graphHopper('f48ee041-ed02-4331-801a-a5b11514707c'),
+	//router: L.Routing.mapbox('pk.eyJ1IjoibmFnYXNlIiwiYSI6IjZnYzBkT3MifQ.ckZKcY6JKHeIylxa0PWa6g'),
+	router: L.Routing.pgRouting('muko'),
 	geocoder: L.Control.Geocoder.nominatim(),
     routeWhileDragging: true,
     reverseWaypoints: true,
